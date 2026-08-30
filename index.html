@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nordic Lodges — Five lodges, five corners of Iceland</title>
+<meta name="description" content="Five self-catering lodges across Iceland: Brekka and Langholt on Hvalfjörður, Tvera in the Westfjords, Hamragil in the north, Stekkar in the south. Booked directly with the owners.">
+<meta name="theme-color" content="#000000" id="themeColor">
+<link rel="preload" href="assets/fonts/Oranienbaum.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Supreme-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon-180.png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%236E7A80' stroke-width='1.2'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css?v=7292e9dd">
+</head>
+<body class="ui-dark is-loading">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- The curtain rehearses the signature: a seam draws down the centre while the
+     page loads, the screen parts along it, and the seam then lands on the
+     wordmark's own rule so the words open out of the very line the page opened
+     along. Gated on html.js so no-JS never sees it. -->
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain__half curtain__half--l"></div>
+  <div class="curtain__half curtain__half--r"></div>
+  <span class="curtain__seam" id="curtainSeam"></span>
+  <span class="curtain__place label" id="curtainPlace">Five houses &#183; one country</span>
+</div>
+
+<header class="header" id="header">
+  <div class="header__row">
+    <button class="header__menu label" id="burger" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="header__icon"><i></i><i></i></span><span>Menu</span>
+    </button>
+    <a class="header__logo" href="#top">
+      <span class="header__logo-a">NORDIC</span><span class="header__logo-b">LODGES</span>
+    </a>
+    <a class="btn btn--underline label header__cta" href="#enquire"><span>Enquire</span><i class="btn__underline"></i></a>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="menu__list" aria-label="Main">
+    <a href="#about"><em class="label">01</em><span class="h2">The collection</span></a>
+    <a href="#collection"><em class="label">02</em><span class="h2">The five lodges</span></a>
+    <a href="#map"><em class="label">03</em><span class="h2">Where they are</span></a>
+    <a href="#fee"><em class="label">04</em><span class="h2">What it costs</span></a>
+    <a href="#terms"><em class="label">05</em><span class="h2">Terms</span></a>
+    <a href="#enquire"><em class="label">06</em><span class="h2">Enquire</span></a>
+  </nav>
+  <p class="menu__foot label">Fagrabrekka v/ Vatnsenda · IS-203 Kópavogur · +354 897 3015</p>
+</div>
+
+<main id="main">
+
+  <!-- ═══ 0 · HERO — the wordmark opens out of the seam the curtain drew ═══ -->
+  <section class="section section--full-height ui-dark ui-background-alt sticky sticky--under-next" id="top">
+    <div class="sticky__layer sticky__layer--sticky hero" data-hero-out>
+      <figure class="hero__media">
+        <img id="heroImg" src="assets/img/hero-dusk-md.webp" srcset="assets/img/hero-dusk-sm.webp 1000w, assets/img/hero-dusk-md.webp 2000w, assets/img/hero-dusk.webp 3400w" sizes="115vw" alt="Stekkar at dusk, its windows lit, the Golden Circle plain behind it" fetchpriority="high">
+        <span class="hero__scrim" aria-hidden="true"></span>
+      </figure>
+      <div class="hero__type">
+        <h1 class="wm" id="wm">
+          <span class="wm__row">
+            <span class="wm__word wm__word--l" id="wmL">Nordic</span><span class="wm__rule" id="wmRule" aria-hidden="true"></span><span class="wm__word wm__word--r" id="wmR">Lodges</span>
+          </span>
+        </h1>
+        <p class="hero__sub">Five self-catering houses, five corners of one country &#8212; each with its own deck, its own hot tub, and the owners at the other end of the email.</p>
+        <p class="hero__meta label"><span>Hvalfj&#246;r&#240;ur</span><span>Westfjords</span><span>Fnj&#243;skadalur</span><span>Golden Circle</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 1 · ABOUT — white band, pinned 3-up that opens ═══ -->
+  <section class="section ui-light ui-background" id="about">
+    <div class="wrap about__head">
+      <p class="label" data-reveal="text" data-delay="250">A collection —<br>not a chain</p>
+      <h2 class="h2 about__h" data-reveal="title">Of five houses in five corners of one country</h2>
+    </div>
+
+    <div class="about__stage" id="tripleStage">
+      <div class="about__pin">
+        <div class="triple" id="triple">
+          <figure class="triple__side" data-img-wrap><img src="assets/img/langholt-tub-sm.webp" srcset="assets/img/langholt-tub-sm.webp 1000w, assets/img/langholt-tub.webp 1800w" sizes="(max-width: 860px) 100vw, 44vw" alt="The barrel hot tub on the deck at Langholt" loading="lazy"></figure>
+          <figure class="triple__mid" data-img-wrap><img src="assets/img/tvera-tub-md.webp" srcset="assets/img/tvera-tub-sm.webp 1000w, assets/img/tvera-tub-md.webp 2000w, assets/img/tvera-tub.webp 3400w" sizes="(max-width: 860px) 110vw, 190vw" alt="The hot tub on the deck at Tvera, the bay below" loading="lazy"></figure>
+          <figure class="triple__side" data-img-wrap><img src="assets/img/stekkar-lounge-sm.webp" srcset="assets/img/stekkar-lounge-sm.webp 1000w, assets/img/stekkar-lounge.webp 1800w" sizes="(max-width: 860px) 100vw, 44vw" alt="The lounge and wood stove at Stekkar" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap about__close">
+      <p class="h1" data-reveal="title">Self-catering houses in places most people only drive past. Booked with the people who built them.</p>
+      <p class="subtitle subtitle--sm about__script" data-reveal="subtitle">of the north</p>
+    </div>
+    <div class="wrap">
+      <figure class="about__fig" data-img-wrap data-reveal="img">
+        <img data-img src="assets/img/stekkar-veranda-md.webp" srcset="assets/img/stekkar-veranda-sm.webp 1100w, assets/img/stekkar-veranda-md.webp 2000w, assets/img/stekkar-veranda.webp 3400w" sizes="(max-width: 860px) 800px, 1650px" alt="The veranda doors open at Stekkar, the winter plain beyond" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══ 3 · THE FIVE — pinned stage, names cycle ═══ -->
+  <section class="section ui-dark ui-background-alt stage" id="collection">
+    <div class="stage__pin">
+      <div class="stage__plates">
+        <figure class="stage__plate is-on"><img src="assets/img/brekka-deck-sm.webp" srcset="assets/img/brekka-deck-sm.webp 1000w, assets/img/brekka-deck.webp 1800w" sizes="(max-width: 860px) 100vw, 46vw" alt="The terrace table at Brekka, looking across Hvalfjörður to the snow line" loading="lazy"></figure>
+        <figure class="stage__plate"><img src="assets/img/langholt-exterior-sm.webp" srcset="assets/img/langholt-exterior-sm.webp 1000w, assets/img/langholt-exterior.webp 1800w" sizes="(max-width: 860px) 100vw, 46vw" alt="Langholt on its slope, the fjord below" loading="lazy"></figure>
+        <figure class="stage__plate"><img src="assets/img/tvera-tub.webp" srcset="assets/img/tvera-tub-sm.webp 1000w, assets/img/tvera-tub.webp 2000w" sizes="(max-width: 60rem) 88vw, 34rem" alt="The hot tub on the deck at Tvera, the bay below" loading="lazy"></figure>
+        <figure class="stage__plate"><img src="assets/img/hamragil-lodge-sm.webp" srcset="assets/img/hamragil-lodge-sm.webp 1000w, assets/img/hamragil-lodge.webp 1800w" sizes="(max-width: 860px) 100vw, 46vw" alt="Hamragil and its deck in Fnjóskadalur" loading="lazy"></figure>
+        <figure class="stage__plate"><img src="assets/img/stekkar-snow.webp" srcset="assets/img/stekkar-snow-sm.webp 1000w, assets/img/stekkar-snow.webp 2000w" sizes="(max-width: 60rem) 88vw, 34rem" alt="Stekkar and its guest house in winter" loading="lazy"></figure>
+      </div>
+      <div class="stage__type">
+        <p class="subtitle" data-reveal="subtitle">The five</p>
+        <h2 class="h0" data-reveal="title">Lodges</h2>
+      </div>
+      <ul class="stage__names" id="stageNames">
+        <li class="is-on"><span class="h3">Brekka</span><span class="label">Hvalfj&#246;r&#240;ur &#183; sleeps 8</span><span class="stage__why">Forty-five minutes from Reykjav&#237;k, and still the whole fjord to yourself.</span></li>
+        <li><span class="h3">Langholt</span><span class="label">Hvalfj&#246;r&#240;ur &#183; sleeps 5</span><span class="stage__why">Hillside above the Atlantic, the S&#250;lur range across the water.</span></li>
+        <li><span class="h3">Tvera</span><span class="label">Westfjords &#183; sleeps 10</span><span class="stage__why">Mountains on three sides, the sea on the fourth, a geothermal pool at the shore.</span></li>
+        <li><span class="h3">Hamragil</span><span class="label">Fnj&#243;skadalur &#183; 6 bedrooms</span><span class="stage__why">The north, where the winter lights are most dependable. Go&#240;afoss fifteen minutes on.</span></li>
+        <li><span class="h3">Stekkar</span><span class="label">Golden Circle &#183; 100 m&#178; + guest house</span><span class="stage__why">In the middle of Geysir, Gullfoss and &#222;ingvellir, with the plain to yourself at night.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ 4 · WHERE THEY ARE — Sobha's locations chapter ═══ -->
+  <section class="section ui-dark ui-background-alt loc" id="map">
+    <div class="loc__maplayer">
+      <div class="loc__map" id="locMap">
+        <div class="loc__plot">
+          <svg viewBox="0 0 520 400" class="loc__svg" aria-hidden="true">
+            <path class="loc__coast" d="M457.1 50.4 L438.2 60.8 L437.2 62.6 L440.7 67.5 L439.9 70.5 L435.3 75.3 L431.9 75.8 L429.9 79.2 L434.5 80.7 L434.4 85.7 L444.3 87.0 L450.2 83.5 L454.7 91.2 L455.3 95.9 L453.3 102.7 L446.6 109.1 L442.6 116.1 L447.2 112.5 L444.7 118.9 L447.9 119.2 L466.0 112.4 L467.5 113.9 L464.6 120.3 L469.9 125.5 L466.2 127.2 L457.2 143.6 L467.9 127.6 L473.5 129.8 L471.1 126.3 L480.8 132.1 L487.7 131.1 L487.8 135.6 L490.2 136.4 L490.6 140.7 L494.6 137.6 L499.3 142.2 L496.6 156.6 L489.3 158.1 L493.8 160.2 L494.0 162.0 L481.7 166.7 L495.8 164.1 L501.1 168.9 L497.3 173.3 L480.5 175.4 L498.5 175.4 L497.8 179.7 L493.2 181.2 L496.6 181.2 L495.9 184.1 L498.5 185.5 L503.2 178.3 L504.0 187.9 L499.3 192.8 L500.4 195.7 L497.6 197.9 L491.7 197.6 L489.5 193.4 L480.5 187.7 L482.3 190.6 L480.7 192.4 L471.7 192.8 L485.6 194.9 L489.9 200.7 L494.5 202.9 L495.4 204.4 L493.5 205.9 L487.5 203.6 L479.6 203.6 L491.4 209.4 L492.3 211.9 L489.4 214.5 L484.8 212.6 L483.5 213.8 L489.1 217.7 L481.4 217.3 L479.9 219.6 L482.6 223.9 L479.9 226.1 L470.1 228.2 L467.0 226.4 L463.4 218.7 L459.3 217.3 L461.9 218.6 L461.4 221.7 L465.1 223.9 L465.6 227.6 L470.1 231.4 L469.9 233.3 L462.5 230.7 L460.2 232.5 L463.9 237.6 L456.7 239.0 L458.5 243.4 L460.3 244.1 L466.7 238.1 L461.4 245.6 L458.1 258.9 L449.0 261.5 L456.9 257.9 L450.5 256.5 L447.4 262.2 L442.0 268.0 L442.6 265.1 L440.1 268.0 L440.8 270.2 L442.6 269.4 L443.2 272.3 L440.9 274.1 L437.1 273.9 L433.1 270.2 L427.8 273.7 L428.7 270.2 L426.6 270.6 L425.0 266.7 L425.4 270.9 L423.5 269.9 L421.6 263.0 L416.9 260.1 L420.1 261.8 L421.7 266.5 L420.2 266.5 L420.2 273.1 L416.7 273.0 L415.7 273.7 L418.4 274.5 L417.3 275.5 L408.1 278.9 L407.5 277.3 L402.3 282.5 L406.0 281.2 L405.4 283.1 L393.9 286.8 L392.3 288.3 L394.4 288.9 L386.9 296.2 L385.6 295.4 L385.7 297.6 L379.9 300.2 L378.7 304.8 L372.8 312.1 L371.4 312.9 L373.2 310.0 L366.6 315.8 L360.6 317.6 L359.0 316.5 L360.5 317.9 L358.4 322.9 L354.4 316.2 L353.1 322.6 L352.5 316.1 L352.6 323.1 L350.8 324.4 L352.0 312.8 L350.7 310.4 L350.8 315.8 L348.1 317.9 L349.1 323.4 L342.0 322.2 L340.4 323.3 L340.2 321.5 L324.6 328.3 L325.1 324.4 L324.2 327.0 L322.9 326.6 L323.3 328.8 L317.5 333.1 L319.1 329.5 L321.7 328.8 L317.8 325.1 L317.8 328.0 L313.2 328.0 L314.1 329.4 L310.5 330.4 L308.8 335.9 L306.6 336.2 L307.3 338.1 L314.1 336.7 L311.1 341.7 L308.4 340.4 L306.5 341.8 L307.5 344.0 L311.4 343.2 L306.7 352.4 L296.5 357.7 L295.1 355.5 L299.9 351.2 L295.1 351.9 L291.2 349.7 L293.4 358.3 L297.0 358.6 L287.6 360.2 L272.8 365.7 L262.1 362.8 L258.5 363.8 L255.1 361.3 L254.2 362.6 L248.2 361.3 L229.5 352.5 L228.4 349.7 L222.4 349.7 L226.9 351.2 L215.2 350.3 L214.5 349.0 L213.6 350.5 L208.5 350.1 L201.1 343.2 L203.9 343.2 L201.7 342.5 L202.0 340.4 L200.5 342.1 L198.7 341.0 L200.2 341.0 L195.6 333.0 L194.5 333.8 L197.5 339.6 L192.4 332.4 L192.1 329.4 L194.7 327.0 L197.7 326.6 L203.0 330.2 L197.2 324.4 L198.6 319.3 L191.9 327.7 L191.2 332.2 L182.7 325.8 L189.9 326.6 L189.3 324.4 L185.1 325.1 L186.4 316.4 L184.8 315.8 L185.9 318.5 L183.4 322.5 L179.9 322.9 L180.6 325.1 L165.1 315.2 L163.9 309.2 L170.5 307.7 L162.1 306.9 L159.3 310.6 L163.3 314.3 L157.1 314.2 L156.3 317.9 L143.3 319.8 L137.4 315.7 L125.4 319.3 L113.4 316.5 L110.9 319.3 L109.5 317.9 L105.1 320.8 L97.7 321.8 L96.0 313.5 L98.0 307.7 L100.2 307.4 L96.0 304.7 L97.3 293.0 L101.3 295.5 L105.4 304.2 L110.8 304.2 L113.0 300.2 L117.2 298.3 L119.5 299.8 L126.5 296.6 L129.9 294.0 L126.3 291.8 L126.8 290.1 L129.1 289.2 L128.7 290.5 L131.3 290.8 L132.1 288.9 L126.3 285.3 L134.3 285.5 L137.2 287.5 L136.3 283.9 L140.5 283.9 L141.4 281.8 L139.1 282.8 L141.1 279.5 L136.6 279.5 L136.4 276.9 L131.5 277.3 L139.2 265.6 L143.7 265.2 L142.0 264.4 L145.9 262.2 L153.0 263.6 L154.2 261.5 L151.2 262.2 L152.6 260.1 L144.6 259.5 L140.8 260.5 L130.0 270.6 L123.9 268.8 L129.0 262.9 L134.5 260.8 L127.8 261.6 L126.3 259.3 L129.4 248.9 L138.1 244.9 L136.3 242.7 L141.4 237.6 L143.9 237.6 L143.7 239.5 L146.9 241.7 L150.6 241.9 L145.1 238.4 L146.9 236.9 L142.4 236.9 L145.7 233.7 L149.9 233.3 L145.4 232.5 L141.4 235.4 L143.3 231.8 L134.8 242.7 L132.2 242.6 L127.9 246.6 L126.6 242.2 L124.5 251.5 L121.0 253.5 L118.4 249.2 L116.9 250.6 L117.5 241.3 L113.3 243.4 L113.0 236.9 L108.7 231.8 L112.2 234.2 L113.6 228.9 L120.0 223.9 L110.5 230.6 L109.6 229.7 L114.2 222.5 L109.0 221.0 L110.2 215.2 L108.7 217.3 L108.1 216.0 L104.1 217.0 L102.1 218.8 L103.3 220.3 L99.2 221.1 L98.6 217.3 L93.9 217.3 L96.9 219.6 L95.7 220.2 L92.7 218.1 L75.8 217.2 L73.2 214.4 L66.5 215.2 L63.9 218.3 L58.7 216.6 L59.5 215.5 L54.3 223.8 L47.2 225.4 L42.3 221.7 L37.2 208.0 L46.5 203.8 L55.9 207.2 L61.4 202.1 L67.2 202.2 L66.6 200.0 L69.1 200.4 L69.3 202.7 L70.6 201.4 L71.0 204.7 L72.5 204.3 L74.2 201.8 L73.6 196.4 L76.6 194.4 L80.2 194.9 L76.9 201.4 L79.3 205.1 L79.2 201.0 L83.1 195.1 L86.6 197.9 L93.6 193.6 L89.7 192.8 L96.6 188.5 L97.5 191.3 L95.1 193.6 L97.8 192.8 L98.5 195.7 L102.7 198.5 L100.5 194.9 L104.2 191.0 L111.5 190.3 L121.4 193.6 L123.0 192.1 L129.1 193.6 L136.0 192.8 L137.2 190.5 L135.1 189.2 L139.9 179.7 L138.6 174.5 L126.8 184.4 L114.2 181.9 L110.5 179.0 L105.7 180.2 L103.6 178.7 L108.1 176.9 L103.9 176.9 L109.3 168.2 L111.6 168.2 L114.5 164.4 L119.4 163.0 L128.7 154.5 L131.2 155.8 L130.6 153.7 L141.8 148.6 L129.3 150.1 L131.2 147.2 L128.7 142.9 L125.5 145.4 L123.3 140.7 L122.3 146.5 L119.5 150.9 L117.1 150.7 L111.2 144.6 L113.0 142.2 L121.0 139.3 L123.6 133.5 L117.5 139.8 L113.0 140.7 L114.5 137.2 L111.8 139.7 L109.9 138.5 L110.2 141.1 L107.1 142.9 L104.2 129.6 L104.1 137.3 L102.3 140.0 L100.4 136.8 L99.3 140.7 L97.0 136.1 L98.1 130.6 L94.7 130.0 L96.0 143.5 L93.6 142.9 L93.1 140.2 L89.1 139.3 L92.8 133.1 L90.5 131.3 L88.3 136.7 L86.1 132.1 L84.7 138.3 L80.8 139.7 L77.1 137.1 L77.2 134.9 L76.0 135.7 L76.0 142.2 L73.9 145.0 L66.0 142.3 L62.4 146.0 L55.1 146.5 L52.5 151.5 L44.4 153.8 L40.6 152.3 L40.5 146.4 L39.0 148.0 L31.2 143.6 L18.6 144.9 L16.0 142.9 L23.3 136.4 L23.7 131.3 L26.5 129.1 L33.9 132.5 L44.6 141.4 L48.4 140.0 L44.5 139.3 L36.0 127.7 L48.4 132.1 L36.3 122.0 L33.9 113.2 L35.8 111.5 L56.3 122.0 L59.0 125.5 L59.2 131.7 L62.1 128.4 L63.0 129.8 L66.9 129.1 L66.0 126.9 L71.5 124.8 L63.8 124.5 L60.2 120.2 L63.4 118.4 L73.3 118.3 L73.0 116.1 L75.7 113.9 L70.0 116.6 L51.8 114.8 L45.8 104.1 L45.9 100.9 L48.7 98.7 L57.5 103.8 L61.1 103.1 L73.3 108.2 L74.8 107.5 L58.5 101.0 L48.1 89.7 L48.4 84.8 L50.9 82.9 L61.2 88.1 L65.1 87.8 L67.5 92.2 L65.4 87.2 L59.9 84.7 L54.5 78.5 L62.7 77.5 L66.6 80.6 L62.8 76.3 L57.5 75.7 L63.7 69.4 L77.3 75.6 L79.3 82.9 L82.9 79.5 L85.1 87.4 L81.5 94.5 L87.2 85.7 L88.4 90.1 L91.1 88.6 L86.6 96.6 L89.2 96.0 L91.9 90.5 L92.1 100.2 L94.5 85.7 L98.1 85.0 L102.8 93.8 L99.6 108.5 L105.4 93.5 L108.7 100.9 L109.6 98.8 L107.5 108.1 L109.2 107.2 L112.4 99.4 L109.6 90.7 L106.9 87.8 L108.4 82.9 L111.4 80.6 L106.7 82.8 L90.0 74.1 L85.1 66.2 L95.1 63.3 L101.5 64.9 L103.9 67.6 L103.6 64.7 L112.1 61.9 L104.2 61.9 L103.3 61.0 L107.5 58.3 L106.5 57.0 L102.0 60.2 L96.9 59.7 L98.7 53.3 L101.4 51.7 L91.9 57.5 L93.0 52.5 L91.4 53.1 L86.8 59.1 L77.9 56.3 L76.3 52.5 L82.0 52.9 L83.0 49.6 L78.1 45.3 L79.5 44.2 L83.6 46.7 L82.7 44.5 L87.5 43.7 L89.7 46.2 L89.9 44.4 L86.3 41.7 L91.5 42.0 L97.5 46.7 L102.9 41.8 L109.4 45.8 L107.8 41.7 L109.2 41.9 L112.8 49.3 L119.4 55.4 L118.7 62.6 L121.4 61.1 L122.6 62.6 L124.3 60.3 L124.5 62.6 L129.2 61.9 L131.8 65.5 L128.7 68.4 L131.8 67.8 L134.8 70.5 L139.4 71.3 L140.5 82.3 L144.2 83.5 L143.0 88.6 L145.1 86.8 L144.2 82.1 L148.3 80.6 L150.0 83.3 L147.8 86.0 L148.9 88.2 L154.8 87.8 L157.9 90.0 L158.4 92.2 L145.7 95.1 L146.5 96.6 L154.4 94.4 L155.7 95.1 L153.2 98.1 L159.2 97.7 L160.0 101.6 L158.1 103.8 L160.2 106.0 L158.0 111.1 L151.4 115.4 L157.8 118.3 L152.9 123.6 L146.9 123.3 L142.2 115.3 L138.1 115.4 L143.0 119.7 L142.0 123.3 L145.5 128.8 L154.2 129.2 L151.2 137.1 L158.3 133.0 L158.4 141.4 L151.4 149.4 L158.6 145.7 L163.1 150.2 L164.0 163.8 L168.5 178.9 L169.6 176.9 L167.2 168.2 L169.3 162.3 L168.1 149.5 L168.7 148.0 L170.1 148.7 L174.2 159.2 L176.3 160.2 L173.1 143.0 L176.1 133.0 L186.9 123.2 L189.2 125.7 L188.1 137.8 L189.6 138.5 L189.8 134.1 L191.1 140.0 L195.7 144.2 L197.8 138.5 L193.3 135.6 L198.6 133.5 L199.6 140.7 L200.1 133.5 L202.6 126.9 L204.8 126.3 L203.1 123.3 L204.7 115.2 L201.7 109.7 L202.5 104.7 L196.9 87.8 L198.7 81.4 L205.4 80.0 L208.6 77.1 L212.7 77.1 L222.0 100.9 L229.6 104.5 L233.1 117.0 L236.3 119.0 L236.9 116.0 L238.2 116.1 L241.1 117.6 L240.8 119.5 L243.3 108.2 L241.0 98.8 L238.4 95.1 L242.7 90.1 L241.6 83.9 L250.8 80.6 L254.0 82.4 L255.0 79.9 L258.4 83.5 L256.3 79.2 L257.9 73.6 L263.4 70.8 L264.8 71.5 L264.5 74.9 L266.6 69.9 L268.6 69.5 L270.8 70.5 L269.6 76.0 L274.6 73.0 L277.8 77.1 L276.0 81.4 L278.8 79.9 L281.1 82.2 L282.3 87.8 L281.3 93.7 L289.8 96.2 L293.7 104.4 L295.5 104.9 L297.4 119.0 L301.1 123.3 L302.4 128.4 L302.5 123.2 L300.3 119.3 L302.2 108.8 L300.7 101.6 L295.5 98.1 L295.3 94.4 L292.0 89.3 L290.6 80.0 L292.0 72.0 L296.6 72.0 L302.8 75.2 L309.0 74.9 L310.2 78.5 L313.3 79.0 L317.8 84.6 L325.1 100.2 L323.8 93.7 L327.5 92.2 L322.4 91.6 L329.4 91.4 L331.1 95.1 L333.8 80.7 L337.8 77.3 L337.7 73.1 L342.9 67.6 L349.7 69.9 L352.8 79.2 L354.5 76.7 L360.1 75.2 L361.7 75.7 L359.0 77.1 L360.3 79.0 L362.6 75.7 L367.2 80.6 L363.2 73.4 L370.1 69.9 L366.0 73.4 L370.8 72.0 L374.7 75.7 L372.1 70.9 L374.9 60.6 L370.8 52.2 L371.1 46.0 L368.3 40.2 L369.6 37.4 L371.4 39.5 L372.1 37.0 L374.6 36.1 L375.4 40.1 L375.0 38.1 L377.5 36.5 L379.8 40.1 L383.2 36.3 L384.1 37.9 L386.3 34.4 L392.6 34.3 L398.4 38.7 L396.5 40.8 L396.3 46.2 L401.1 46.0 L400.8 48.1 L406.6 49.2 L407.8 54.6 L403.5 60.4 L407.3 62.9 L406.9 66.2 L414.4 66.9 L421.0 75.1 L423.1 70.1 L423.2 63.3 L433.0 61.6 L441.1 50.3 L444.9 49.6 L448.7 51.7 L457.1 50.4 Z"/>
+          </svg>
+          <span class="loc__pin is-active" style="--x:28.1%;--y:66%" data-pin="0"><i></i></span>
+          <span class="loc__pin" style="--x:27.7%;--y:66.5%" data-pin="1"><i></i></span>
+          <span class="loc__pin" style="--x:13.6%;--y:30.7%" data-pin="2"><i></i></span>
+          <span class="loc__pin" style="--x:59.5%;--y:29.3%" data-pin="3"><i></i></span>
+          <span class="loc__pin" style="--x:37%;--y:68.1%" data-pin="4"><i></i></span>
+        </div>
+      </div>
+      <div class="loc__dim" aria-hidden="true"></div>
+      <div class="loc__scrim" aria-hidden="true"></div>
+      <div class="loc__title" id="locTitle">
+        <p class="subtitle" data-reveal="subtitle">Where they</p>
+        <h2 class="h0" data-reveal="title">Are</h2>
+      </div>
+    </div>
+
+    <div class="loc__cards" id="locCards">
+      <article class="loc__card is-on">
+        <p class="label">01 &#8212; Hvalfj&#246;r&#240;ur, the west</p>
+        <h3 class="h2">Brekka</h3>
+        <p class="loc__body">Three bedrooms &#8212; two doubles, two singles and a sofa bed &#8212; sleeping up to eight. Open-plan, underfloor heating, fibre internet, and a large terrace with a BBQ and a geothermal hot tub. Langholt stands 150 metres away.</p>
+        <p class="label loc__dist">45 min from Reykjav&#237;k &#183; shop 3 km in summer, 25 km in winter</p>
+      </article>
+      <article class="loc__card">
+        <p class="label">02 &#8212; Hvalfj&#246;r&#240;ur, the west</p>
+        <h3 class="h2">Langholt</h3>
+        <p class="loc__body">Built in 2013 and sleeping five &#8212; three bedrooms, two doubles and a single. The same fjord, the same underfloor heating and geothermal tub, on a hillside looking across at the S&#250;lur range.</p>
+        <p class="label loc__dist">45 min from Reykjav&#237;k &#183; 1.5 h from Keflav&#237;k airport</p>
+      </article>
+      <article class="loc__card">
+        <p class="label">03 &#8212; The Westfjords</p>
+        <h3 class="h2">Tvera</h3>
+        <p class="loc__body">Five bedrooms &#8212; three doubles, two singles &#8212; room for ten. Floor heating, a full kitchen, a terrace with a BBQ, and a geothermal pool in the rocks down at the shore. Dynjandi is thirty minutes north.</p>
+        <p class="label loc__dist">South coast of the Westfjords &#183; L&#225;trabjarg a day out</p>
+      </article>
+      <article class="loc__card">
+        <p class="label">04 &#8212; Fnj&#243;skadalur, the north</p>
+        <h3 class="h2">Hamragil</h3>
+        <p class="loc__body">Six bedrooms &#8212; two doubles, two twins, two singles. Central heating, fibre internet, a large deck with a BBQ and a geothermal hot tub, in the birch valley behind Akureyri. Go&#240;afoss is fifteen minutes on; M&#253;vatn and Dettifoss a morning.</p>
+        <p class="label loc__dist">Near Akureyri &#183; the north&#8217;s most dependable aurora skies</p>
+      </article>
+      <article class="loc__card">
+        <p class="label">05 &#8212; The Golden Circle</p>
+        <h3 class="h2">Stekkar</h3>
+        <p class="loc__body">Over 100 m&#178; of living space plus a separate 30 m&#178; guest house. Two bedrooms with double beds, a sofa bed if you need it, a long table under pendant lights and a wood stove in the lounge.</p>
+        <p class="label loc__dist">Geysir, Gullfoss and &#222;ingvellir all within reach</p>
+      </article>
+      <div class="loc__progress" aria-hidden="true"><i id="locBar"></i></div>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT IT COSTS — the one place a number stings ═══ -->
+  <section class="section section--full-height ui-dark ui-background" id="fee">
+    <div class="fee__in wrap">
+      <p class="label" data-reveal="text">What it costs</p>
+      <h2 class="h1 fee__h" data-reveal="title">Brekka is &#8364;380 a night for six. Their booking page then adds <em>&#8364;350</em>.</h2>
+      <p class="fee__p" data-reveal="text" data-delay="250">That is the figure printed on the lodge&#8217;s own reservation panel today, before a single night is counted. Seven nights or more take 10% off the nightly rate; fourteen or more take 20%. Above six guests it is &#8364;33 per person per night.</p>
+      <p class="fee__p" data-reveal="text" data-delay="400">Booked here, the fee is not there. You write to the people who own the houses, they answer, and the price you were quoted is the price you pay.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 5 · TERMS ═══ -->
+  <section class="section ui-light ui-background" id="terms">
+    <div class="wrap">
+      <p class="label" data-reveal="text">Before you ask</p>
+      <h2 class="h2" data-reveal="title">The terms, stated plainly</h2>
+      <dl class="terms">
+        <div><dt class="label">Arrival</dt><dd>Check in from 16:00, out by 11:00 — every lodge, every season.</dd></div>
+        <div><dt class="label">Minimum stay</dt><dd>Three nights at Brekka, Tvera and Hamragil. Five at Langholt and Stekkar.</dd></div>
+        <div><dt class="label">Longer stays</dt><dd>10% off from seven nights, 20% off from fourteen.</dd></div>
+        <div><dt class="label">Larger groups</dt><dd>Above six guests, €33 per extra person per night.</dd></div>
+        <div><dt class="label">In every lodge</dt><dd>Fibre internet, a full kitchen with dishwasher, a washing machine, and a deck facing the view.</dd></div>
+        <div><dt class="label">Heating</dt><dd>Underfloor at Brekka and Langholt; central heating at Hamragil.</dd></div>
+      </dl>
+      <p class="terms__note">Published on the lodges' own pages. Confirmed with you by email before anything is charged.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 6 · QUOTES — pinned stack ═══ -->
+  <section class="section ui-dark ui-background quotes" id="quotes">
+    <div class="quotes__pin">
+      <p class="quotes__count label"><span id="quoteNum">1</span> &#8212; 2</p>
+      <div class="quotes__list" id="quotesList">
+        <blockquote class="is-on"><p class="h2">Six lodges, five locations, one amazing country.</p><cite class="label">Nordic Lodges, on their own home page &#8212; though the sixth link goes to a page that no longer exists</cite></blockquote>
+        <blockquote><p class="h2">I think it is very likely you will see us again some time in the future. We were 100% happy with both our bookings.</p><cite class="label">A guest, on Tvera and Brekka</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 7 · ENQUIRE — the register card ═══ -->
+  <section class="section ui-light ui-background register" id="enquire">
+    <figure class="register__bg" aria-hidden="true"><img src="assets/img/stekkar-dusk2-md.webp" srcset="assets/img/stekkar-dusk2-sm.webp 1000w, assets/img/stekkar-dusk2-md.webp 2000w, assets/img/stekkar-dusk2.webp 4000w" sizes="135vw" alt=""></figure>
+    <div class="register__screen">
+      <div class="register__form">
+        <p class="subtitle subtitle--sm" data-reveal="subtitle">Enquire</p>
+        <h2 class="h3 register__h" data-reveal="title">Which lodge, and when?</h2>
+        <fieldset class="pick">
+          <legend class="label">The lodge</legend>
+          <label><input type="radio" name="lodge" value="Brekka" checked><span>Brekka</span></label>
+          <label><input type="radio" name="lodge" value="Langholt"><span>Langholt</span></label>
+          <label><input type="radio" name="lodge" value="Tvera"><span>Tvera</span></label>
+          <label><input type="radio" name="lodge" value="Hamragil"><span>Hamragil</span></label>
+          <label><input type="radio" name="lodge" value="Stekkar"><span>Stekkar</span></label>
+        </fieldset>
+        <div class="bk_cal">
+          <div class="bk_head">
+            <button class="bk_navbtn" id="calPrev" type="button" aria-label="Previous month">←</button>
+            <div class="bk_month" id="calMonth" aria-live="polite"></div>
+            <button class="bk_navbtn" id="calNext" type="button" aria-label="Next month">→</button>
+          </div>
+          <div class="bk_dow" id="calDow"></div>
+          <div class="bk_grid" id="calGrid"></div>
+        </div>
+        <div class="register__out">
+          <div><span class="label">Arrival</span><span class="register__val" id="outStart">Select a date</span></div>
+          <div><span class="label">Departure</span><span class="register__val" id="outEnd">Select a date</span></div>
+        </div>
+        <p class="register__sum" id="outSum">Choose your arrival night on the calendar.</p>
+        <a class="btn btn--fill" id="askGo" href="mailto:lodges@nordiclodges.com" aria-disabled="true"><span>Draft the enquiry</span></a>
+        <p class="register__note">Opens your own mail app with the lodge and dates filled in. Nothing is booked or charged here.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="section ui-dark ui-background-alt footer" id="contact">
+  <div class="wrap">
+    <p class="h1 footer__statement" id="footerStatement">Five houses, five corners of one country, and one desk that answers all of them.</p>
+    <div class="footer__row">
+      <a class="ring footer__up" href="#top" aria-label="Back to top">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19.35" fill="none" stroke="#6E7A80" stroke-width="1.3"/>
+          <path d="M20 27V13M14 19l6-6 6 6" fill="none" stroke="#fff" stroke-width="1"/>
+        </svg>
+      </a>
+      <address class="footer__addr">
+        Fagrabrekka v/ Vatnsenda<br>IS-203 Kópavogur, Iceland<br>
+        <a href="tel:+3548973015">+354 897 3015</a> · <a href="mailto:lodges@nordiclodges.com">lodges@nordiclodges.com</a><br>
+        <span class="label footer__hours">Answering 08:00–18:00 GMT, seven days</span>
+      </address>
+      <a class="btn btn--underline label footer__credit" href="https://sndr-studio.pages.dev" target="_blank" rel="noopener"><span class="footer__creditIn">Design by<svg class="sndrmark" width="98" height="12" viewBox="0 0 98 12" role="img" aria-hidden="true"><text x="0" y="10" font-family="Supreme, system-ui, sans-serif" font-weight="600" font-size="11" letter-spacing="1.1" fill="currentColor">SNDR</text><text x="43" y="10" font-family="Supreme, system-ui, sans-serif" font-weight="500" font-size="11" letter-spacing="1.1" fill="currentColor" opacity=".5">STUDIO</text></svg><span class="a11y-name">SNDR Studio</span></span><i class="btn__underline"></i></a>
+    </div>
+    <p class="footer__legal">Design prototype — not the official Nordic Lodges website. Lodge counts, bedrooms, capacities, minimum stays, rates, fees, discounts and contact details read from nordiclodges.com, August 2026. Founded 2013 by Jón Baldur Thorbjörnsson and Helmut Dussileck.</p>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="app.js?v=df37c843"></script>
+</body>
+</html>
