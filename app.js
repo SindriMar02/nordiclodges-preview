@@ -63,6 +63,18 @@
   }, { rootMargin: '-8% 0% -88% 0%' });
   document.querySelectorAll('.section').forEach(function (s) { lightIO.observe(s); });
 
+  /* The glass bar is what keeps the wordmark legible over arbitrary photography and
+     stops every chapter's text colliding with it. Over the OPENING frame there is
+     nothing to collide with yet, so the bar stays transparent and the hero is clean.
+     Passive listener + a class toggle only on change: no layout read per scroll. */
+  var atTop = null;
+  function tickTop() {
+    var t = window.scrollY <= 8;
+    if (t !== atTop) { atTop = t; body.classList.toggle('at-top', t); }
+  }
+  tickTop();
+  window.addEventListener('scroll', tickTop, { passive: true });
+
   /* ── menu ─────────────────────────────────────────────────────────────── */
   var burger = document.getElementById('burger');
   var menu = document.getElementById('menu');

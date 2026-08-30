@@ -127,11 +127,11 @@ html.js body.is-loading { overflow: hidden; }
 .header { position: fixed; inset: 0 0 auto 0; z-index: 100; padding: calc(var(--spacing) * .9) var(--pad);
   padding-top: calc(var(--spacing) * .9 + env(safe-area-inset-top)); color: var(--c-white);
   transition: color .4s var(--house), opacity .4s var(--house), background-color .4s var(--house); }
-.header::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,0) 100%);
-  opacity: 1; transition: opacity .4s var(--house); }
-body.is-light-header .header::before { opacity: 0; }
-body.is-light-header .header { background-color: rgba(255,255,255,.82); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.header { background-color: rgba(20,24,26,.90); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.10); }
+body.is-light-header .header { background-color: rgba(255,255,255,.90); border-bottom-color: rgba(20,24,26,.12); }
+/* the hero owns the top of the page: no bar over the opening frame */
+body.at-top .header { background-color: transparent; border-bottom-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
 body.is-light-header .header { color: var(--c-brand-black); }
 .header__row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .header__menu { display: inline-flex; align-items: center; gap: .55rem; cursor: pointer; justify-self: start; }
