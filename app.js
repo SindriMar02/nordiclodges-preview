@@ -332,6 +332,12 @@
     var names = document.querySelectorAll('#stageNames li');
     if (!wrap || !plates.length) return;
     var n = plates.length, cur = 0;
+    var pin = wrap.querySelector('.stage__pin') || wrap;
+    var plateBox = wrap.querySelector('.stage__plates');
+    function headerH() {
+      var h = document.querySelector('.header');
+      return h ? h.getBoundingClientRect().height : 0;
+    }
     /* ONE owner of the state, called by both the scroll driver and a tap. */
     function select(i) {
       if (i === cur) return;
@@ -359,14 +365,22 @@
       var btn = li.querySelector('.stage__pick');
       if (!btn) return;
       btn.addEventListener('click', function () {
-        var range = st.end - st.start;
-        if (range > window.innerHeight * 0.75) {
-          var p = (i + 0.5) / n * 0.92;
-          var y = st.start + p * range;
+        var pinned = getComputedStyle(pin).position === 'sticky';
+        if (pinned) {
+          /* the scroll driver owns the state here: scroll to the beat and let it set
+             the lodge, or it would be overwritten on the very next scroll frame */
+          var range = st.end - st.start;
+          var y = st.start + ((i + 0.5) / n * 0.92) * range;
           if (window.__lenis) window.__lenis.scrollTo(y);
           else window.scrollTo({ top: y, behavior: 'smooth' });
         } else {
+          /* not pinned: select directly, then make sure the thing that changed is
+             actually on screen before returning control to the visitor */
           select(i);
+          var box = plateBox.getBoundingClientRect();
+          if (box.top < headerH() || box.bottom > window.innerHeight) {
+            window.scrollTo({ top: window.scrollY + box.top - headerH() - 12, behavior: 'smooth' });
+          }
         }
       });
     });
