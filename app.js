@@ -349,11 +349,16 @@
         if (b) b.setAttribute('aria-pressed', k === i ? 'true' : 'false');
       });
     }
+    var pinned = false;
+    function measurePin() { pinned = getComputedStyle(pin).position === 'sticky'; }
+    measurePin();
     var st = ScrollTrigger.create({
       trigger: wrap, start: 'top top', end: 'bottom bottom', scrub: true,
       onUpdate: function (self) {
+        if (!pinned) return;
         select(Math.min(n - 1, Math.floor(Math.min(self.progress, 0.92) / 0.92 * n)));
-      }
+      },
+      onRefresh: measurePin
     });
     /* Tapping a lodge must not fight the scroll driver. Where the chapter is really
        pinned (a long trigger range) the driver owns the state, so a tap SCROLLS to that
@@ -365,7 +370,6 @@
       var btn = li.querySelector('.stage__pick');
       if (!btn) return;
       btn.addEventListener('click', function () {
-        var pinned = getComputedStyle(pin).position === 'sticky';
         if (pinned) {
           /* the scroll driver owns the state here: scroll to the beat and let it set
              the lodge, or it would be overwritten on the very next scroll frame */
@@ -374,13 +378,7 @@
           if (window.__lenis) window.__lenis.scrollTo(y);
           else window.scrollTo({ top: y, behavior: 'smooth' });
         } else {
-          /* not pinned: select directly, then make sure the thing that changed is
-             actually on screen before returning control to the visitor */
           select(i);
-          var box = plateBox.getBoundingClientRect();
-          if (box.top < headerH() || box.bottom > window.innerHeight) {
-            window.scrollTo({ top: window.scrollY + box.top - headerH() - 12, behavior: 'smooth' });
-          }
         }
       });
     });
