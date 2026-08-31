@@ -42,7 +42,13 @@
       var mask = document.createElement('span');
       mask.className = 'rl';
       var inner = document.createElement('i');
-      inner.textContent = ws.join(' ');
+      ws.forEach(function (w, wi) {
+        var word = document.createElement('b');
+        word.className = 'rw';
+        word.textContent = w;
+        inner.appendChild(word);
+        if (wi < ws.length - 1) inner.appendChild(document.createTextNode(' '));
+      });
       mask.appendChild(inner);
       el.appendChild(mask);
     });
@@ -211,9 +217,13 @@
       var lines = el.querySelectorAll('.rl');
       var fire = function () {
         if (lines.length) {
-          lines.forEach(function (l, i) {
-            l.style.transitionDelay = (delay + i * 0.02 * 1.85) + 's';   /* §9 char stagger 20ms ×1.85 line offset */
+          var n = 0;
+          lines.forEach(function (l) {
             l.classList.add('in');
+            l.querySelectorAll('.rw').forEach(function (w) {
+              w.style.transitionDelay = (delay + Math.min(n * 0.045, 0.62)) + 's';
+              n++;
+            });
           });
         } else {
           el.style.transitionDelay = delay + 's';

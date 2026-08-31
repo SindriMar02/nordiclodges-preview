@@ -76,9 +76,11 @@ button, input { font: inherit; color: inherit; background: none; border: 0; }
 
 /* ── §5 reveals: title (char stagger), text (line), subtitle, block ──────── */
 .rl { display: block; overflow: hidden; padding: .12em 0 .3em; margin: -.12em 0 -.3em; }
-.rl > i { display: block; font-style: inherit; transform: translateY(120%) scale(1.25); transform-origin: 0 100%; }
-html:not(.js) .rl > i { transform: none; }
-.rl.in > i { transform: none; transition: transform 1.4s var(--title); }
+.rl > i { display: block; font-style: inherit; white-space: nowrap; }
+.rw { display: inline-block; font-weight: inherit; font-style: inherit;
+  transform: translateY(115%); will-change: transform; }
+html:not(.js) .rw { transform: none; }
+.rl.in .rw { transform: none; transition: transform 1.05s var(--title); }
 /* §9 text blocks slide in 60px on the slide-in curve — never a bare fade */
 [data-reveal="text"] { opacity: 0; transform: translateY(60px); }
 [data-reveal="subtitle"] { opacity: 0; transform: translateY(24px); }
@@ -396,7 +398,7 @@ body.menu-open .menu { opacity: 1; visibility: visible; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rl > i { transform: none !important; }
+  .rl > i, .rw { transform: none !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
   [data-reveal="img"] img { transform: none !important; }
   .stage__plate.is-on, .loc__card, .quotes__list blockquote { opacity: 1; }
