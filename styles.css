@@ -220,6 +220,13 @@ body.menu-open .menu { opacity: 1; visibility: visible; }
   list-style: none; display: grid; gap: clamp(.7rem, 2vh, 1.35rem); width: min(30rem, 62vw);
 }
 .stage__names li { display: grid; gap: .18rem; }
+/* Each lodge is a real control: five houses were reachable only by scrolling the
+   chapter at exactly the right speed, and on a phone (where the chapter is not pinned)
+   four of the five photographs could not be reached at all. */
+.stage__pick { display: grid; gap: .18rem; width: 100%; text-align: left; cursor: pointer;
+  background: none; border: 0; padding: .35rem 0; font: inherit; color: inherit;
+  -webkit-tap-highlight-color: transparent; }
+.stage__pick:focus-visible { outline: 2px solid var(--c-white); outline-offset: 4px; }
 .stage__names li .h3 { color: #6E7A80; transition: color 1s var(--house); }
 .stage__names li.is-on .h3 { color: var(--c-white); }
 
@@ -337,6 +344,7 @@ body.menu-open .menu { opacity: 1; visibility: visible; }
 @media (max-width: 1000px) {
   .terms { grid-template-columns: repeat(2, 1fr); }
   .loc__card, .loc__progress { width: min(28rem, 60vw); }
+  .loc__title { padding-inline: var(--pad); }
 }
 @media (max-width: 860px) {
   .header__cta { display: none; }
@@ -354,17 +362,25 @@ body.menu-open .menu { opacity: 1; visibility: visible; }
   .stage__type { position: static; text-align: left; }
   .stage__plates { position: relative; right: auto; top: auto; translate: none; width: 100%; margin-top: clamp(1.6rem, 5vw, 2.4rem); aspect-ratio: 4/5; }
   .stage__names { position: static; margin-top: clamp(1.6rem, 5vw, 2.4rem); gap: 1.15rem; width: 100%; }
+  .stage__pick { padding: .55rem 0; }
   .stage__names li .h3 { color: #7E8A90; }
   .stage__names li.is-on .h3 { color: var(--c-white); }
   .stage__why { max-width: none; }
-  .loc { display: block; }
-  .loc__maplayer { position: relative; height: auto; padding: calc(5.5rem + env(safe-area-inset-top)) var(--pad) 2.5rem; }
-  .loc__title { position: static; display: block; text-align: center; padding-top: 0; }
-  .loc__plot { width: 100%; margin: 1.6rem auto 0; transform: none; }
-  .loc__cards::before { display: none; }
-  .loc__cards { padding-top: 0; }
-  .loc__card { position: relative; height: auto; width: 100%; margin: 0; padding: 1.6rem var(--pad); border-bottom: 1px solid var(--t-line); opacity: 1; }
-  .loc__progress { display: none; }
+  /* The locations chapter KEEPS its scroll experience on a phone — pinned map layer,
+     cards swapping over it, live progress rule. It is only re-composed for portrait:
+     the map sits in the upper half and the card is anchored to the bottom behind its
+     own scrim, instead of the desktop map-left / card-right split. Flattening it to a
+     static list (which is what fixed the edge-padding bug first time round) threw the
+     whole chapter away. */
+  .loc__map { place-items: start center; padding-top: 15svh; }
+  .loc__plot { width: 94vw; transform: none; }
+  /* the desktop scrim is a right-edge wash; on a phone the card sits at the bottom */
+  .loc__scrim { inset: auto 0 0 0; width: auto; height: 64svh;
+    background: linear-gradient(0deg, rgba(0,0,0,.95) 36%, rgba(0,0,0,.72) 62%, rgba(0,0,0,0) 100%); }
+  .loc__card { width: 100%; margin: 0; justify-content: flex-end;
+    padding: 0 var(--pad) calc(var(--spacing) * 3.4); }
+  .loc__body { max-width: none; }
+  .loc__progress { width: auto; margin: 0 var(--pad); bottom: calc(var(--spacing) * 1.8); }
   .terms { grid-template-columns: 1fr; }
   .quotes { height: auto; }
   .quotes__pin { position: relative; height: auto; padding: 4rem var(--pad); gap: 2.5rem; }

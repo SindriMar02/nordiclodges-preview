@@ -332,15 +332,43 @@
     var names = document.querySelectorAll('#stageNames li');
     if (!wrap || !plates.length) return;
     var n = plates.length, cur = 0;
-    ScrollTrigger.create({
+    /* ONE owner of the state, called by both the scroll driver and a tap. */
+    function select(i) {
+      if (i === cur) return;
+      cur = i;
+      plates.forEach(function (p, k) { p.classList.toggle('is-on', k === i); });
+      names.forEach(function (l, k) {
+        l.classList.toggle('is-on', k === i);
+        var b = l.querySelector('.stage__pick');
+        if (b) b.setAttribute('aria-pressed', k === i ? 'true' : 'false');
+      });
+    }
+    var st = ScrollTrigger.create({
       trigger: wrap, start: 'top top', end: 'bottom bottom', scrub: true,
       onUpdate: function (self) {
-        var i = Math.min(n - 1, Math.floor(Math.min(self.progress, 0.92) / 0.92 * n));
-        if (i === cur) return;
-        cur = i;
-        plates.forEach(function (p, k) { p.classList.toggle('is-on', k === i); });
-        names.forEach(function (l, k) { l.classList.toggle('is-on', k === i); });
+        select(Math.min(n - 1, Math.floor(Math.min(self.progress, 0.92) / 0.92 * n)));
       }
+    });
+    /* Tapping a lodge must not fight the scroll driver. Where the chapter is really
+       pinned (a long trigger range) the driver owns the state, so a tap SCROLLS to that
+       lodge's beat and lets the driver set it — setting the class directly there would
+       be overwritten on the next scroll frame. Where the chapter is not pinned (phone,
+       height:auto) the range collapses and there is no driver to fight, so the tap
+       selects directly. */
+    names.forEach(function (li, i) {
+      var btn = li.querySelector('.stage__pick');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var range = st.end - st.start;
+        if (range > window.innerHeight * 0.75) {
+          var p = (i + 0.5) / n * 0.92;
+          var y = st.start + p * range;
+          if (window.__lenis) window.__lenis.scrollTo(y);
+          else window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+          select(i);
+        }
+      });
     });
   })();
 
