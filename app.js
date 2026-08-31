@@ -379,6 +379,10 @@
           else window.scrollTo({ top: y, behavior: 'smooth' });
         } else {
           select(i);
+          var box = plateBox.getBoundingClientRect();
+          if (box.top < headerH() + 8 || box.bottom > window.innerHeight) {
+            window.scrollTo({ top: window.scrollY + box.top - headerH() - 16, behavior: 'smooth' });
+          }
         }
       });
     });
