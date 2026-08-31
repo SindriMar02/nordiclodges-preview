@@ -378,7 +378,7 @@ body.menu-open .menu { opacity: 1; visibility: visible; }
   .loc__scrim { inset: auto 0 0 0; width: auto; height: 64svh;
     background: linear-gradient(0deg, rgba(0,0,0,.95) 36%, rgba(0,0,0,.72) 62%, rgba(0,0,0,0) 100%); }
   .loc__card { width: 100%; margin: 0; justify-content: flex-end;
-    padding: 0 var(--pad) calc(var(--spacing) * 3.4); }
+    padding: 0 var(--pad) calc(var(--spacing) * 5); }
   .loc__body { max-width: none; }
   .loc__progress { width: auto; margin: 0 var(--pad); bottom: calc(var(--spacing) * 1.8); }
   .terms { grid-template-columns: 1fr; }
